@@ -25,20 +25,23 @@ namespace MisContactos
             Navigation.PushAsync(new DetallesContactoPage(contactoSeleccionado));
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
 
-            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.DB_Path))
-            {
-                conn.CreateTable<Contacto>();
+            var Contactos = await Contacto.Read();
+            listaContactosListView.ItemsSource = Contactos;
 
-                var contactos = conn.Table<Contacto>().ToList();
+            //using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.DB_Path))
+            //{
+            //    conn.CreateTable<Contacto>();
 
-                ObservableCollection<Contacto> observableContactos = new ObservableCollection<Contacto>(contactos);
+            //    var contactos = conn.Table<Contacto>().ToList();
 
-                listaContactosListView.ItemsSource = observableContactos;
-            }
+            //    ObservableCollection<Contacto> observableContactos = new ObservableCollection<Contacto>(contactos);
+
+            //    listaContactosListView.ItemsSource = observableContactos;
+            //}
         }
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)

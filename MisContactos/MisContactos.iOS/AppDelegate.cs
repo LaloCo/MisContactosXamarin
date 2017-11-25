@@ -5,6 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 using System.IO;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace MisContactos.iOS
 {
@@ -27,6 +28,7 @@ namespace MisContactos.iOS
             string carpeta = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), "..", "Library");
             string rutaCompleta = Path.Combine(carpeta, nombreArchivo);
 
+            CurrentPlatform.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(rutaCompleta));
 

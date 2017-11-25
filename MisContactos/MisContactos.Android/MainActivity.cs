@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace MisContactos.Droid
 {
@@ -24,6 +25,7 @@ namespace MisContactos.Droid
             string carpeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
             string rutaCompleta = Path.Combine(carpeta, nombreArchivo);
 
+            CurrentPlatform.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(rutaCompleta));
         }

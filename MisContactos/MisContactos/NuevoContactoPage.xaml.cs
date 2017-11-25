@@ -18,7 +18,7 @@ namespace MisContactos
             InitializeComponent();
         }
 
-        private void saveButton_Clicked(object sender, EventArgs e)
+        private async void saveButton_Clicked(object sender, EventArgs e)
         {
             Contacto nuevoContacto = new Contacto()
             {
@@ -29,10 +29,16 @@ namespace MisContactos
 
             //// App.Contactos.Add(nuevoContacto);
 
-            using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(App.DB_Path))
-            {
-                connection.Insert(nuevoContacto);
-            }
+            //using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(App.DB_Path))
+            //{
+            //    connection.Insert(nuevoContacto);
+            //}
+
+            //? var tareaInsert = Contacto.Insert(nuevoContacto);
+            // otras cosas
+            var resultado = await Contacto.Insert(nuevoContacto);
+            await DisplayAlert("Resultado", $"{resultado}", "ok");
+            //
         }
     }
 }
