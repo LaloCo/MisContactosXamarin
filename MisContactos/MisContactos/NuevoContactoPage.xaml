@@ -5,12 +5,19 @@
     <ContentPage.Content>
         <StackLayout>
             <Entry x:Name="nombreEntry"
+                   Text="432rgrs"
                    Placeholder="Nombre"/>
             <Entry x:Name="emailEntry"
+                   Text="gdsgf"
                    Placeholder="Email"
                    Keyboard="Email"/>
             <Entry x:Name="phoneEntry"
                    Placeholder="Phone"
+                   Text="gfdgfds"
+                   Keyboard="Telephone"/>
+            <Entry x:Name="edadEntry"
+                   Placeholder="Phone"
+                   Text="gfdgfds"
                    Keyboard="Telephone"/>
             <Button x:Name="saveButton"
                     Text="Guardar"

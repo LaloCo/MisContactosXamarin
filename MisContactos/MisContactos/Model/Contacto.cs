@@ -50,3 +50,6 @@ namespace MisContactos.Model
         }
     }
 }
+
+
+// https://github.com/LaloCo/MisContactosXamarin.git

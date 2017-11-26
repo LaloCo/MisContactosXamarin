@@ -14,6 +14,12 @@ namespace MisContactos
     public partial class DetallesContactoPage : ContentPage
     {
         Contacto Contacto;
+
+        public DetallesContactoPage()
+        {
+            InitializeComponent();
+        }
+
         public DetallesContactoPage(Contacto contacto)
         {
             InitializeComponent();

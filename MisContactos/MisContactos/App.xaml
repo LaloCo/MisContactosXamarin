@@ -2,9 +2,29 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MisContactos.App">
-	<Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="colorPrincipal">#00FF00</Color>
+            <Color x:Key="colorSecundario">#FF0000</Color>
 
-		<!-- Application resource dictionary -->
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Orange"/>
+                <Setter Property="TextColor" Value="{StaticResource colorSecundario}"/>
+            </Style>
 
-	</Application.Resources>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource colorSecundario}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="20,10,5,10"/>
+            </Style>
+            <Style TargetType="Label" x:Key="textoTitulo">
+                <Setter Property="TextColor" Value="{StaticResource colorPrincipal}"/>
+                <Setter Property="FontSize" Value="25"/>
+            </Style>
+            <Style TargetType="Label" x:Key="textoSubtitulo">
+                <Setter Property="TextColor" Value="{StaticResource colorPrincipal}"/>
+                <Setter Property="FontSize" Value="22"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
