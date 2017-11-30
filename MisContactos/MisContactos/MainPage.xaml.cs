@@ -53,3 +53,4 @@ namespace MisContactos
 
 
 //! http://bit.ly/2jnNcU3
+//! https://github.com/LaloCo/MisContactosXamarin.git

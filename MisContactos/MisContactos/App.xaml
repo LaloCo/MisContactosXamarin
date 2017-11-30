@@ -14,16 +14,16 @@
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource colorSecundario}"/>
-                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontSize" Value="15"/>
                 <Setter Property="Margin" Value="20,10,5,10"/>
             </Style>
             <Style TargetType="Label" x:Key="textoTitulo">
-                <Setter Property="TextColor" Value="{StaticResource colorPrincipal}"/>
+                <Setter Property="TextColor" Value="Orange"/>
                 <Setter Property="FontSize" Value="25"/>
             </Style>
             <Style TargetType="Label" x:Key="textoSubtitulo">
-                <Setter Property="TextColor" Value="{StaticResource colorPrincipal}"/>
-                <Setter Property="FontSize" Value="22"/>
+                <Setter Property="TextColor" Value="Purple"/>
+                <Setter Property="FontSize" Value="20"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>
